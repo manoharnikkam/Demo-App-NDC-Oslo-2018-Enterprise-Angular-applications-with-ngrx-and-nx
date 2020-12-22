@@ -1,5 +1,6 @@
 ```
 npx create-nx-workspace@latest --linter=eslint --style=scss --no-nx-cloud
+npm install -D @nrwl/angular
 
 - nx generate @nrwl/angular:application --name=customer-portal --style=scss --linter=eslint --routing --strict --tags=customerfacing
   - nx generate @nrwl/angular:ngrx --name=products --module=/apps/customer-portal/src/app/app.module.ts --barrels --root

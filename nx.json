@@ -22,5 +22,35 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "customer-portal": {
+      "tags": ["customerfacing"]
+    },
+    "customer-portal-e2e": {
+      "tags": [],
+      "implicitDependencies": ["customer-portal"]
+    },
+    "admin-portal": {
+      "tags": ["admin"]
+    },
+    "admin-portal-e2e": {
+      "tags": [],
+      "implicitDependencies": ["admin-portal"]
+    },
+    "auth": {
+      "tags": ["auth"]
+    },
+    "data-models": {
+      "tags": ["data-models"]
+    },
+    "material": {
+      "tags": ["material"]
+    },
+    "layout": {
+      "tags": ["layout"]
+    },
+    "products": {
+      "tags": []
+    }
+  }
 }

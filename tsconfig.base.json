@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-workspace/auth": ["libs/auth/src/index.ts"],
+      "@nx-workspace/data-models": ["libs/data-models/src/index.ts"],
+      "@nx-workspace/material": ["libs/material/src/index.ts"],
+      "@nx-workspace/layout": ["libs/layout/src/index.ts"],
+      "@nx-workspace/products": ["libs/products/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

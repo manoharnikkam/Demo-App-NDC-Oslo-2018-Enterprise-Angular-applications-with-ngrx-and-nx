@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" fxLayout="row">
+  <span>Customer Portal</span>
+  <div class="right-nav">
+    <span *ngIf="user">
+      <button mat-button>{{ user?.username }}</button>
+      <button
+        mat-button
+        [routerLink]="['/products']"
+        routerLinkActive="router-link-active"
+      >
+        Products
+      </button>
+      <button mat-button (click)="logout()">Logout</button>
+    </span>
+    <span *ngIf="!user">
+      <span
+        mat-button
+        [routerLink]="['/auth/login']"
+        routerLinkActive="router-link-active"
+        >Login</span
+      >
+    </span>
+  </div>
+</mat-toolbar>

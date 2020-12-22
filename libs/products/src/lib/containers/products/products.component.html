@@ -1,0 +1,8 @@
+<div fxLayout="row" fxFlexLayout="center center">
+  <nx-workspace-product-list
+    [products]="products$ | async"
+    (filter)="updateUrlFilter($event)"
+  >
+  </nx-workspace-product-list>
+  <!-- {{ products$ | async | json }} -->
+</div>

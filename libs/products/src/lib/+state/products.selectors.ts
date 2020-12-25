@@ -18,29 +18,23 @@ export const getProductsState = createFeatureSelector<State>(
 );
 
 const { selectAll, selectEntities } = productsAdapter.getSelectors();
+export const getSelectedId = (state: State) => state.selectedId;
+export const getProductsError = (state: State) => state.error;
 
 export const getProductsLoaded = createSelector(
   getProductsState,
   (state: State) => state.loaded
 );
 
-export const getProductsError = createSelector(
+export const getAllProducts = createSelector(
   getProductsState,
-  (state: State) => state.error
-);
-
-export const getAllProducts = createSelector(getProductsState, (state: State) =>
-  selectAll(state)
+  // (state: State) => selectAll(state) /* or the line below to make short hand */
+  selectAll
 );
 
 export const getProductsEntities = createSelector(
   getProductsState,
-  (state: State) => selectEntities(state)
-);
-
-export const getSelectedId = createSelector(
-  getProductsState,
-  (state: State) => state.selectedId
+  selectEntities // (state: State) => selectEntities(state)
 );
 
 export const getSelected = createSelector(

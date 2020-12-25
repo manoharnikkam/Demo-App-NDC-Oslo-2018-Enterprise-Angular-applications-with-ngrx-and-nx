@@ -7,7 +7,9 @@ import { User } from '@nx-workspace/data-models';
   styleUrls: ['./layout-form.component.scss'],
 })
 export class LayoutFormComponent implements OnInit {
-  @Input() user: User | null = null;
+  // If I uncomment the
+  // @Input() user: User | null = null;
+  @Input() user: User | null | undefined;
   @Output() userLoggedOut = new EventEmitter<User>();
 
   constructor() {}

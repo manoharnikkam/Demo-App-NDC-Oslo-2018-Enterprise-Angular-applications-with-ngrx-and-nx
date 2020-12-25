@@ -21,6 +21,7 @@ const initialState: State = {
   // set initial required properties
   loaded: false,
   user: null,
+  error: '',
 };
 
 const authReducer = createReducer(

@@ -20,11 +20,7 @@ export const getProductsState = createFeatureSelector<State>(
 const { selectAll, selectEntities } = productsAdapter.getSelectors();
 export const getSelectedId = (state: State) => state.selectedId;
 export const getProductsError = (state: State) => state.error;
-
-export const getProductsLoaded = createSelector(
-  getProductsState,
-  (state: State) => state.loaded
-);
+export const getProductsLoaded = (state: State) => state.loaded;
 
 export const getAllProducts = createSelector(
   getProductsState,
